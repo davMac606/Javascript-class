@@ -6,6 +6,51 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
    
+
+   <script>
+    var variavel = "um valor de string";
+    console.log("variavel =" + variavel);
+    console.log(typeof variavel);
+
+    variavel = 10;
+    console.log("variavel =" + variavel);
+    console.log(typeof variavel);
+
+    variavel = true;
+    console.log("variavel =" + variavel);
+    console.log(typeof variavel);
+
+
+console.log("como ja dizia: \" pipipipopopop\"");
+
+/*--- escopo de var */
+
+var nome = 'Simone';
+if(nome != null){
+    var sobrenome = 'dAPOLITO';
+    console.log(nome + ''+ sobrenome);
+}
+/*--- a var sobrenome e acessivel mesmo fora do if onde foi criada*/
+
+console.log(nome + ' ' + sobrenome);
+
+
+/*--- escopo de let */
+
+let colegio = 'Cotil';
+
+if(colegio!= null){
+    let universidade = 'Unicamp';
+    console.log(colegio + ' ' + universidade);
+}
+//universidade nao e acessivel fora do bloco
+   </script>
+
+
+
+
+
+
    <noscript>
     <style>
     body{
@@ -31,6 +76,7 @@
     <script>
         var uau = true;
         var texto = "titulo secundario";
+        
         function mudaTitulo() {
             if (document.getElementById('title').innerHTML == texto) {
                 document.getElementById('title').innerHTML = "Titulo uau";
