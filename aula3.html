@@ -144,6 +144,27 @@ function executeEx4() {
       console.log(nomes.length);
       document.write(nomes + "<br>");
       document.write(nomes.length + "<br>");
+
+      nomes.push(12);//mesmo sendo numero e nao string o cod roda
+      nomes.push(false);
+
+      console.log(nomes);
+      console.log(nomes.length);
+
+      //adiciona no inicio
+
+     nomes.unshift('ana');
+      console.log(nomes);
+
+
+      console.log("-------------------------");
+      console.log(typeof nomes); //retorna object
+
+      //array multidimencinal
+      var multidimensional = [[1,2,3],[4,5,6],[7,8,9]];
+      console.log("----Array de array------");
+      console.log(multidimensional);
+
 }
 
 
