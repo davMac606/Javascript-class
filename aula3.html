@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
         }
     </style>
 </head>
+
 <body>
     <script lang="javascript">
 
@@ -25,53 +27,79 @@
         var nomeCompleto = nome + " " + surname;
         window.document.write("<h1 id='cor'>" + nomeCompleto + "</h1>");
 
-  var valor1 = prompt("Valor 1:");
-  var valor2 = prompt("Valor 2:");
+        var valor1 = prompt("Valor 1:");
+        var valor2 = prompt("Valor 2:");
 
-//parseInt()
-  var soma = parseFloat(valor1) + parseFloat(valor2);
-  window.document.write("Soma:"+ soma);
-
- 
-  
-function executeEx2() {
-    var str = "hello";
-
-    var chars = [...str];
-    console.log(chars);
+        //parseInt()
+        var soma = parseFloat(valor1) + parseFloat(valor2);
+        window.document.write("Soma:" + soma);
 
 
-    var nome = 'Exemplo';
-    var sobrenome = 'Dois';
-    var idade = 20;
-    
-    function escreveTemplate() {
-        document.write(`Meu nome é ${nome} ${sobrenome}. Eu tenho ${idade}anos.`);
-      }
 
-      function escreveNormal() {
-        document.write("Meu nome é " + nome + ' ' + sobrenome + ". Eu tenho " + idade + " anos.");
-      }
-    
-    var answerPrompt = prompt("Template ou normal? 1 para template, 2 para normal.");
+        function executeEx2() {
+            var str = "hello";
 
-    if (parseFloat(answerPrompt) == 1) {
-        escreveTemplate();
-    } else {
-        escreveNormal();
-    }
-    
-
-    
-}
-  
+            var chars = [...str];
+            console.log(chars);
 
 
-        
+            var nome = 'Exemplo';
+            var sobrenome = 'Dois';
+            var idade = 20;
+
+            function escreveTemplate() {
+                document.write(`Meu nome é ${nome} ${sobrenome}. Eu tenho ${idade} anos. Isso foi escrito com o template eba`);
+            }
+
+            function escreveNormal() {
+                document.write("Meu nome é " + nome + ' ' + sobrenome + ". Eu tenho " + idade + " anos. Isso foi normal bem broxa");
+            }
+
+            var answerPrompt = prompt("Template ou normal? 1 para template, 2 para normal.");
+
+            if (parseFloat(answerPrompt) == 1) {
+                escreveTemplate();
+            } else {
+                escreveNormal();
+            }
+        }
+
+        function executeEx3() {
+            alert("this is working");
+            //extrai um,a parte do texto
+
+            var texto = "Mergulhando em tecnologia";
+            console.log(texto.substr(0, 11));
+
+            texto = "Unicamp";
+            console.log("tamanho:" + texto.length);
+            console.log(texto.toLowerCase());
+            console.log(texto.toUpperCase());
+
+
+            console.log("---------charAt()---------");
+            console.log(texto.charAt(3));
+            document.write(texto);
+
+            console.log("---------split()---------");
+            texto = "23/10/2018";
+            var aux = texto.split("/");
+            console.log(aux);
+            document.write(aux);
+
+        }
+
+
     </script>
-
+    <br>
     <button onclick="executeEx2()">
         Exemplo 2
     </button>
+    <br>
+    <br>
+    <button onclick="executeEx3()">
+        Exemplo 3
+    </button>
 </body>
+
 </html>
