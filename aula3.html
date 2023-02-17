@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eba</title>
+
+    <style>
+        #cor {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script lang="javascript">
+
+        alert("Hello World!");
+
+        var nome = prompt("Seu nome");
+
+
+        var surname = prompt("Seu sobrenome");
+
+        var nomeCompleto = nome + " " + surname;
+        window.document.write("<h1 id='cor'>" + nomeCompleto + "</h1>");
+
+  var valor1 = prompt("Valor 1:");
+  var valor2 = prompt("Valor 2:");
+
+//parseInt()
+  var soma = parseFloat(valor1) + parseFloat(valor2);
+  window.document.write("Soma:"+ soma);
+
+ 
+  
+function executeEx2() {
+    var str = "hello";
+
+    var chars = [...str];
+    console.log(chars);
+
+
+    var nome = 'Exemplo';
+    var sobrenome = 'Dois';
+    var idade = 20;
+    
+    function escreveTemplate() {
+        document.write(`Meu nome é ${nome} ${sobrenome}. Eu tenho ${idade}anos.`);
+      }
+
+      function escreveNormal() {
+        document.write("Meu nome é " + nome + ' ' + sobrenome + ". Eu tenho " + idade + " anos.");
+      }
+    
+    var answerPrompt = prompt("Template ou normal? 1 para template, 2 para normal.");
+
+    if (parseFloat(answerPrompt) == 1) {
+        escreveTemplate();
+    } else {
+        escreveNormal();
+    }
+    
+
+    
+}
+  
+
+
+        
+    </script>
+
+    <button onclick="executeEx2()">
+        Exemplo 2
+    </button>
+</body>
+</html>
