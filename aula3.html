@@ -156,6 +156,26 @@ function executeEx4() {
      nomes.unshift('ana');
       console.log(nomes);
 
+      //deleta apenas o valor da posição, mas a posição e mantida
+
+      delete nomes[1];
+      console.log(nomes);
+
+      //remove e retorna o ultimo elemento de um array - pop
+      var nomes = nomes.pop;
+      console.log("Elemento removido" + nome);
+      console.log(nomes);
+
+
+      //remove e retorna o 1+ elemento de um array - shift
+      nomes = nomes.shift();
+      console.log("elemento removido:" +nome);
+      console.log(nomes);
+
+      //splice especifica o indice inicial e a quantidade de elementos a serem removidos incluinjdo o elementop de indice inicial
+      var test = [1,2,3,4];
+      test.splice(2,1);
+      console.log(test);
 
       console.log("-------------------------");
       console.log(typeof nomes); //retorna object
