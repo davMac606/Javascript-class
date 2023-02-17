@@ -121,6 +121,32 @@
 
         }
 
+function executeEx4() {
+      var a = new Array(10);
+      a[0]="xwew";
+      a[1]= true;
+      a[2]= 1.500;
+      console.log(a);
+      document.write(a + "<br>");
+
+      var nomes = ['felipe']; //declara o array de forma literal
+
+      console.log("------array inicial-------");
+      console.log(nomes);
+      console.log(nomes.length);
+      document.write(nomes + "<br>");
+      document.write(nomes.length + "<br>");
+      //mostra o tamanho do array, nesse caso é 1
+
+      nomes.push('Kennedy'); //adiciona mais um nome na lista 
+      console.log("------------------");
+      console.log(nomes);
+      console.log(nomes.length);
+      document.write(nomes + "<br>");
+      document.write(nomes.length + "<br>");
+}
+
+
 
     </script>
     <br>
@@ -131,6 +157,11 @@
     <br>
     <button onclick="executeEx3()">
         Exemplo 3
+    </button>
+    <br>
+    <br>
+    <button onclick="executeEx4()">
+        Exemplo 4
     </button>
 </body>
 
