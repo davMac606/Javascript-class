@@ -9,7 +9,8 @@
     <script type="text/javascript">
 
         //concatenando arrays 
-
+function fun1() {
+    console.clear();
         var tecnico = ["LP", "BD", "daw"];
         var medio = ["matematica", "PORTUGUES", "FISICA"];
         var formacaoCompleta = tecnico.concat(medio);
@@ -102,7 +103,7 @@
         */
         console.log(carros);
         console.log(newCarros);
-
+    }
 
         console.log("--------DESCONSTRUÇÃO DE ARRAY--------");
 
@@ -112,12 +113,14 @@
             return acumulador + atual;
         }
         );
+        function fun2() {
+            console.clear();
         console.log(total1);
 
         const total2 = aulas.reduce((acc, cur) => acc + cur, 100);
         console.log(total2);
         //reduce reduz os itens de um array a um valor único. Esta função de callback tem um valor especial, o acumulador, que é o retorno da iteração anterior
-
+        }
 
 
 
@@ -147,7 +150,10 @@
 
 <body>
 
-
+    <button onclick="fun1()">Funções de Array</button>
+    <br>
+    <br>
+    <button onclick="fun2()">Desconstrução de Array</button>
 
 
 </body>
