@@ -122,6 +122,19 @@ function fun1() {
         //reduce reduz os itens de um array a um valor único. Esta função de callback tem um valor especial, o acumulador, que é o retorno da iteração anterior
         }
 
+//findindex localiza o index de um item na nlista
+
+let frutas= ['banana','pera','uva','maça'];
+const buscaUva = frutas.findIndex(
+    (fruta)=>{
+    return fruta === "uva";
+}
+); 
+
+//find localiza um item na lista
+let numeros = [5,34,56,77];
+let buscaMaior45 = numeros.find(x => x > 45);
+console.log(buscaMaior45);
 
 
 
