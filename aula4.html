@@ -9,101 +9,101 @@
     <script type="text/javascript">
 
         //concatenando arrays 
-function fun1() {
-    console.clear();
-        var tecnico = ["LP", "BD", "daw"];
-        var medio = ["matematica", "PORTUGUES", "FISICA"];
-        var formacaoCompleta = tecnico.concat(medio);
+        function fun1() {
+            console.clear();
+            var tecnico = ["LP", "BD", "daw"];
+            var medio = ["matematica", "PORTUGUES", "FISICA"];
+            var formacaoCompleta = tecnico.concat(medio);
 
-        console.log("---------array completo---------")
-        console.log(formacaoCompleta);
-
-
-        //gerando String com elementos do array tecnico
-        var stringResultado = tecnico.join("-");
-        console.log("----String resultante=" + stringResultado);
+            console.log("---------array completo---------")
+            console.log(formacaoCompleta);
 
 
-        var formacaoBasica = medio.slice(1, 3);
-        console.log("---- formacaoBasica =" + formacaoBasica);
-        //a partir da primeira conte 3 e pegue 
+            //gerando String com elementos do array tecnico
+            var stringResultado = tecnico.join("-");
+            console.log("----String resultante=" + stringResultado);
 
 
-
-        tecnico.reverse();
-        console.log("---Array invertido----");
-        console.log(tecnico);
+            var formacaoBasica = medio.slice(1, 3);
+            console.log("---- formacaoBasica =" + formacaoBasica);
+            //a partir da primeira conte 3 e pegue 
 
 
 
-
-        //sort - organiza o array pelo unicod e modifica o array original
-
-        console.log("----Sort----");
-        const instrumentos = ['guitarra', 'xilofone', 'violao '];
-        instrumentos.sort();
-        console.log(instrumentos);
-
-        const idades = [32, 31, 33, 43, 8];
-        //considera o primeiro numero quando trabalha com unicode
-        idades.sort();
-        console.log(idades);
+            tecnico.reverse();
+            console.log("---Array invertido----");
+            console.log(tecnico);
 
 
 
 
-        //map - percorre vetor e obtem array novo em que os resultados sao  olhar no slide
+            //sort - organiza o array pelo unicod e modifica o array original
 
-        const lista = [1, 2, 3, 4, 5, 6, 7, 9, 16, 25, 36, 49, 81, 256];
-        //item = valor de cada posição
-        const novaLista = lista.map(
-            function (item) {
-                return item * item;
-                //função anonima, ou de callback,função recebe outra função, vai pegar cada item e multiplicar por 5 gerando outro array 
+            console.log("----Sort----");
+            const instrumentos = ['guitarra', 'xilofone', 'violao '];
+            instrumentos.sort();
+            console.log(instrumentos);
 
+            const idades = [32, 31, 33, 43, 8];
+            //considera o primeiro numero quando trabalha com unicode
+            idades.sort();
+            console.log(idades);
+
+
+
+
+            //map - percorre vetor e obtem array novo em que os resultados sao  olhar no slide
+
+            const lista = [1, 2, 3, 4, 5, 6, 7, 9, 16, 25, 36, 49, 81, 256];
+            //item = valor de cada posição
+            const novaLista = lista.map(
+                function (item) {
+                    return item * item;
+                    //função anonima, ou de callback,função recebe outra função, vai pegar cada item e multiplicar por 5 gerando outro array 
+
+                }
+
+            );
+
+            console.log("Resultado Map: " + novaLista);
+
+
+            const novaLista2 = lista.map(function (item, index) {
+                return item + index;
+
+                //vai somar o valor do item com o valor da posição
             }
-
-        );
-
-        console.log("Resultado Map: " + novaLista);
+            );
+            console.log("Resultado Map2: " + novaLista2);
 
 
-        const novaLista2 = lista.map(function (item, index) {
-            return item + index;
+            //com arrow function
 
-            //vai somar o valor do item com o valor da posição
+            //USAR ARROW OU ANON EM MAP
+            const carros = ['Ford', 'Fiat', 'Honda'];
+            /*
+            const newCarros = carros.map(function(item){
+            
+                return 'Carro' + " - " + item;
+            }
+            );
+            */
+
+            const newCarros = carros.map((item) => {
+                return 'Carro' + item;
+            }
+            );
+            //Modo mais prático de função
+
+
+            /*function concatenaCarros(item) {
+                carros = 'Carro' + item;
+            }
+            Tipo mais comum de função
+            */
+            console.log(carros);
+            console.log(newCarros);
         }
-        );
-        console.log("Resultado Map2: " + novaLista2);
-
-
-        //com arrow function
-
-        //USAR ARROW OU ANON EM MAP
-        const carros = ['Ford', 'Fiat', 'Honda'];
-        /*
-        const newCarros = carros.map(function(item){
-        
-            return 'Carro' + " - " + item;
-        }
-        );
-        */
-        
-        const newCarros = carros.map((item) => {
-            return 'Carro' + item;
-        }
-        );
-        //Modo mais prático de função
-        
-
-        /*function concatenaCarros(item) {
-            carros = 'Carro' + item;
-        }
-        Tipo mais comum de função
-        */
-        console.log(carros);
-        console.log(newCarros);
-    }
 
         console.log("--------DESCONSTRUÇÃO DE ARRAY--------");
 
@@ -115,42 +115,79 @@ function fun1() {
         );
         function fun2() {
             console.clear();
-        console.log(total1);
+            console.log(total1);
 
-        const total2 = aulas.reduce((acc, cur) => acc + cur, 100);
-        console.log(total2);
-        //reduce reduz os itens de um array a um valor único. Esta função de callback tem um valor especial, o acumulador, que é o retorno da iteração anterior
+            const total2 = aulas.reduce((acc, cur) => acc + cur, 100);
+            console.log(total2);
+            //reduce reduz os itens de um array a um valor único. Esta função de callback tem um valor especial, o acumulador, que é o retorno da iteração anterior
+
+
+            //findindex localiza o index de um item na nlista
+
+            let frutas = ['banana', 'pera', 'uva', 'maça'];
+            const buscaUva = frutas.findIndex(
+                (fruta) => {
+                    return fruta === "uva";
+
+                }
+            );
+            console.log(" Posição Uva: " + buscaUva);
+
+            //find localiza um item na lista
+            let numeros = [5, 34, 56, 77];
+            let buscaMaior45 = numeros.find(x => x > 45);
+            //ele para no primeiro que atender os parametros
+            console.log(buscaMaior45);
+
+
+            //includes verifica se tem algo dentro de um array
+
+            let nomesTeste = ['Matheus', 'Lucas', 'Joao'];
+            console.log(nomesTeste.includes('Simone'));
+            if (nomesTeste.includes('Simone')) {
+                console.log("Simone esta na lista");
+            } else {
+                console.log("Simone nao esta na lista");
+            }
+
+
+            //some verifica se pelo menos um return da interação é verdadeiro
+            console.log(nomesTeste.some(nome => nome === 'Lucas'));
+
+            //every, todos os itens devem dar return de interação
+            numeros = [2, 3, 4, 5, 6];
+            const maiorQue1 = numeros.every(x => console.log(x > 1));
+
+
+            numeros = [6, 43, 22, 88, 101, 29];
+            buscaMaior45 = numeros.filter(x => x > 45);
+            console.log(buscaMaior45);
+
+
+
+
+
+
+
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
-
-//findindex localiza o index de um item na nlista
-
-let frutas= ['banana','pera','uva','maça'];
-const buscaUva = frutas.findIndex(
-    (fruta)=>{
-    return fruta === "uva";
-}
-); 
-
-//find localiza um item na lista
-let numeros = [5,34,56,77];
-let buscaMaior45 = numeros.find(x => x > 45);
-console.log(buscaMaior45);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
