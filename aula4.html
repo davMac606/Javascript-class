@@ -75,10 +75,32 @@
         );
         console.log("Resultado Map2: " + novaLista2);
 
+
+        //com arrow function
+
+        const carros = ['Ford', 'Fiat', 'Honda'];
+        /*
+        const newCarros = carros.map(function(item){
+        
+            return 'Carro' + " - " + item;
+        }
+        );
+        */
+        
+        const newCarros = carros.map((item) => {
+            return 'Carro' + item;
+        }
+        );
+        //Modo mais prático de função
         
 
-
-
+        /*function concatenaCarros(item) {
+            carros = 'Carro' + item;
+        }
+        Tipo mais comum de função
+        */
+        console.log(carros);
+        console.log(newCarros);
 
 
 
