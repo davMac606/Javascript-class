@@ -78,6 +78,7 @@
 
         //com arrow function
 
+        //USAR ARROW OU ANON EM MAP
         const carros = ['Ford', 'Fiat', 'Honda'];
         /*
         const newCarros = carros.map(function(item){
@@ -102,6 +103,20 @@
         console.log(carros);
         console.log(newCarros);
 
+
+        console.log("--------DESCONSTRUÇÃO DE ARRAY--------");
+
+        const aulas = [10, 25, 30];
+
+        const total1 = aulas.reduce((acumulador, atual) => {
+            return acumulador + atual;
+        }
+        );
+        console.log(total1);
+
+        const total2 = aulas.reduce((acc, cur) => acc + cur, 100);
+        console.log(total2);
+        //reduce reduz os itens de um array a um valor único. Esta função de callback tem um valor especial, o acumulador, que é o retorno da iteração anterior
 
 
 
