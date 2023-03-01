@@ -6,6 +6,7 @@ while($n<=10){
     echo $n. "x" .$tabuada . "=" . ($n * $tabuada) . "<br>";
     $n++;
 
+}
 
 $n = 11;
 $tabuada= 4; 
@@ -57,9 +58,27 @@ do{
 
 
 
+//funções 
+ function calcMedia($n1, $n2) {
+    $media = ($n1+$n2)/2;
+    return $media;
+    // nao necessariamente precisa do return , return $media; so se quiser usar o valor fora da função 
+ }
+
+ $media = calcMedia(7.0 , 9.5);
+
+ echo "Média =". $media . "<br>";
+
+
+ if($media >= 6.0){
+    echo "<span id = 'aprovado'>Aprovado!</span>";
+
+ }else{
+   echo "<span id = 'reprovado'>Reprovado!</span>";
+ }
 
 
 
 
 
-}
+?>
