@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,14 +44,14 @@
         var min = hoje2.getMinutes();
         var sec = hoje2.getSeconds();
 
-        
+
         var eba = true;
 
         var dataX = new Date("10/04/2022");
         var dataY = new Date("25/02/2021");
 
-        if(dataX.getTime() === dataY.getTime()) {
-        alert("Datas iguais!");
+        if (dataX.getTime() === dataY.getTime()) {
+            alert("Datas iguais!");
         } else {
             alert("Eu prefiro gaslighting. ~Bianca");
         }
@@ -81,12 +82,19 @@
             configByTime();
         }
 
-        function configByTime(){
-            if (hoje.getHours()<18){
-                document.getElementsById("body").style.backgroundColor="yellow";
-                document.getElementById("texto").textContent="blue";
-                document.getElementById("saudacao").textContent="Boa Tarde";
-            }else {
+        function configByTime() {
+            if (hoje.getHours() < 18) {
+                document.getElementsById("body").style.backgroundColor = "yellow";
+                document.getElementById("texto").textContent = "blue";
+                if (hoje.getHours() < 12) {
+                    document.getElementById("saudacao").textContent = "Bom dia";
+                } else {
+                    document.getElementById("saudacao").textContent = "Boa tarde";
+                }
+            } else {
+                document.getElementsById("body").style.backgroundColor = "gray";
+                document.getElementById("texto").textContent = "white";
+                document.getElementById("saudacao").textContent = "Boa noite";
 
             }
         }
@@ -98,7 +106,7 @@
         }
 
 
-        body{
+        body {
             margin: 0;
         }
 
@@ -112,17 +120,19 @@
             width: calc(100vw - padding);
         }
 
-        #saudacao{
+        #saudacao {
             font-size: 20px;
         }
     </style>
 </head>
+
 <body onload="tiraBixoDoSite();escreveData();">
     <p id="texto">eba</p>
     <button onclick="muda()">kk feio pra porra muda isso</button>
 
     <div id="data"></div>
     <span id="saudacao"></span>
-    
+
 </body>
+
 </html>
