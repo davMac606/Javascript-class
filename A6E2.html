@@ -41,7 +41,7 @@
     
             
             console.log(curso.disciplinas);
-           console.log(curso.disciplinas[0].sigla);
+           console.log(curso.disciplinas.sigla);
             var x = curso;
             x.sigla = "SI";
 
@@ -66,12 +66,27 @@
             }
 
 
+            function e4eba() {
+                function cadastrarPessoa(info){
+                    let novosDados ={
+                        ...info,
+                        nome:"Simone",
+                        cargo: "Professora",
+                        status:"Atuando",
+                        codigo: 1234
+                    };
+                    console.log(novosDados);
+                }
+                cadastrarPessoa({sobrenome: "Dapólito", anoInicio:2020});
+            
 
-        
+            }
+       
     </script>
 </head>
 <body>
     <button onclick="e2eba()">Exemplo 2</button>
     <button onclick="e3eba()">Exemplo 3</button>
+    <button onclick="e4eba()">Exemplo 4</button>
 </body>
 </html>
