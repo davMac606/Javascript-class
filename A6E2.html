@@ -40,7 +40,6 @@
     
             
             console.log(curso.disciplinas);
-           console.log(curso.disciplinas.sigla);
             var x = curso;
             x.sigla = "SI";
 
@@ -77,11 +76,40 @@
                     console.log(novosDados);
                 }
                 cadastrarPessoa({sobrenome: "Dapólito", anoInicio:2020});
-            
+   
+                let nome = "Ana";
+                nome = "Maria";
+                pessoa.nome = "Joana";
 
-            
+               
+                console.log(nome);
+                console.log(pessoa);
 
+
+                var curso = {
+                sigla: "SI",
+                nome: "Sistemas de informação",
+                };
+
+                var x = curso;
+                x.sigla = "SI";
+                x.nome = "Sistemas de Informação";
+
+        
+                console.log(curso.sigla);
+                console.log(x.sigla);
      
+
+                var x = {...curso};
+
+                x.sigla = "SI2";
+
+                delete curso.nome;
+
+                console.log(curso.sigla);
+                console.log(curso.nome);
+
+                
        
     </script>
 </head>
