@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function e2eba() {
+            var curso = {
+                sigla: "TI",
+                nome: "Técnico em Informática",
+                //disciplinas: ['DS', 'LP',]
+                disciplinas: [
+                {
+                    sigla: "DS",
+                    nome: "Desenvolvimento de Aplicações Web"
+                },
+                {
+                    sigla: "LP",
+                    nome: "Lógica de Programação"
+                },
+                ]
+            };
+            console.log(curso.sigla);
+            console.log(curso.disciplinas[0]);
+            console.log(curso.nome);
+
+            var curso ={
+                sigla:"TI",
+                nome:"Tecnico em informatica",
+            };
+            curso.sigla = "SI";
+            curso.nome="Sistemas de informação";
+    
+            console.log(curso.sigla);
+            console.log(curso.nome);
+    
+            curso.sigla = "DS";
+            curso.nome = "Desenvolvimento de Sistemas";
+    
+            
+            console.log(curso.disciplinas);
+           console.log(curso.disciplinas[0].sigla);
+            var x = curso;
+            x.sigla = "SI";
+
+            }
+
+            function e3eba() {
+                var pessoa = {
+                    nome: "José",
+                    idade: 30,
+                    cargo: "Frentista"
+                };
+
+                console.log(pessoa);
+
+                var novaPessoa = {
+                    ...pessoa,
+                    anoAtual: 2020,
+                    cidade: "Limeira"
+                };
+
+                console.log(novaPessoa);
+            }
+
+
+
+        
+    </script>
+</head>
+<body>
+    <button onclick="e2eba()">Exemplo 2</button>
+    <button onclick="e3eba()">Exemplo 3</button>
+</body>
+</html>
