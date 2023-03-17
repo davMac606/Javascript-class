@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function verifyIMC() {
+        var weight = document.getElementById('peso').value;
+        var height = document.getElementById('altura').value;
+
+        var IMC = weight / Math.pow(height, 2);
+        
+        document.getElementById('resultado').innerHTML = "Seu peso é: " + IMC + ".";
+        }
+    </script>
+
+    <form>
+<input type="text" id="peso" name="peso" placeholder="Peso" required>
+<br>
+<br>
+<input type="text" id="altura" name="altura" placeholder="Altura" required>
+<br>
+<br>
+<input type="button" value="submit" onclick="verifyIMC()">
+    </form>
+    <p id="resultado">Seu peso é: </p>
+</body>
+</html>

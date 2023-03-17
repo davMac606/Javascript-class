@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var alObj = {
+            ra: 12345,
+            nome: 'Simone'
+        }
+
+        var alStr = JSON.stringify(alObj);
+        console.log("Objeto em JSON");
+        console.log(alStr);
+
+        console.log("conversão do JSON em formato de texto para um objeto");
+        var newAlObj = JSON.parse(alStr);
+        console.log("JSON em JS: ");
+        console.log(newAlObj.ra);
+        console.log(newAlObj.nome);
+        console.log("-------------");
+
+        console.log("literais");
+        var literalBool = true;
+        var literalString = 'JS básico';
+        var literalNum = 10;
+
+        console.log(literalBool);
+        console.log(literalString);
+        console.log(literalNum);
+
+        document.write("Concatenação");
+
+
+        document.write(1 + 2 + 3 + "testando <br>");
+        function clinica() {
+            document.onabort();
+            document.removeChild();
+            document.replaceChild();
+
+        }
+
+        document.write("testando" + 1 + 2 + 3);
+
+
+
+
+
+function fazerPedido(){
+    var pedido = parseInt(prompt("O que voce deseja?"));
+
+    switch(pedido){
+        case 1:alert("Voce pediu Sorvete");
+        break;
+        case 2:alert("Voce pediu Suco");
+        break;
+        case 3:alert("Voce pediu Coca");
+        break;
+        case 4:alert("Voce pediu água");
+        break;
+         default: alert("Ops não temos essa opção");
+        break;
+        
+}
+document.write("<br> código após o switch");
+}
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h1> Menu</h1>
+    <ol>
+
+        <li>Sorvete </li>
+        <li>Suco</li>
+        <li>Coca Gelada</li>
+        <li>água gelada</li>
+    </ol>
+
+    <button onclick="fazerPedido();">fazer Pedido </button>
+
+</body>
+
+</html>
