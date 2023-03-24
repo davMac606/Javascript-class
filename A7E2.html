@@ -8,17 +8,6 @@
 </head>
 <body>
     <style>
-        body { 
-            background-color: rgb(172, 162, 162);
-        }
-        #peso {
-            background-color: rgb(172, 162, 162);
-            border-color: rgb(172, 162, 162);
-        }
-        #altura {
-            background-color: rgb(172, 162, 162);
-            border-color: rgb(172, 162, 162);
-        }
         #aviso {
             color: red;
             font-weight: bold;
@@ -28,7 +17,7 @@
             font-weight: bold;
         }
         #result {
-            color: lime;
+            color: rgb(67, 183, 67);
             font-style: italic;
         }
 
@@ -58,10 +47,11 @@
                 document.getElementById('result').innerHTML = "Seu IMC é: " + IMC + ".";
             }
            
-        }    
-       
-
         }
+   
+       document.write(x);
+        }
+        
     </script>
     <form>
 <input type="text" id="peso" name="peso" placeholder="Peso" required onfocus="limpa()"> <p id="aviso"></p>
@@ -73,6 +63,6 @@
 
 <input type="button" value="submit" onclick="verifyIMC()">
     </form>
-    <p id="result">Seu peso é: </p>
+    <p id="result">Seu IMC é: </p>
 </body>
 </html>
