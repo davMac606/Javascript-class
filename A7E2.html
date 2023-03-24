@@ -7,27 +7,71 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        body { s
+            background-color: rgb(172, 162, 162);
+        }
+        #peso {
+            background-color: rgb(172, 162, 162);
+            border-color: rgb(172, 162, 162);
+        }
+        #altura {
+            background-color: rgb(172, 162, 162);
+            border-color: rgb(172, 162, 162);
+        }
+        #aviso {
+            color: red;
+            font-weight: bold;
+        }
+        #aviso1 {
+            color: red;
+            font-weight: bold;
+        }
+        #result {
+            color: lime;
+            font-style: italic;
+        }
+    </style>
     <script type="text/javascript">
+        function limpa() {
+            document.getElementById('aviso').innerHTML = "";
+        }
+
+        
+        function limpa1() {
+            document.getElementById('aviso1').innerHTML = "";
+        }
+
 
         function verifyIMC() {
         var weight = document.getElementById('peso').value;
         var height = document.getElementById('altura').value;
 
-        var IMC = weight / Math.pow(height, 2);
-        
-        document.getElementById('resultado').innerHTML = "Seu peso é: " + IMC + ".";
+        if (weight <= 0) {
+            document.getElementById('aviso').innerHTML ="O valor não pode ser negativo!";
+        } else {
+            if (height <= 0) {
+                document.getElementById('aviso1').innerHTML = "O valor não pode ser negativo!";
+            } else {
+                var IMC = weight / Math.pow(height, 2);        
+                document.getElementById('result').innerHTML = "Seu IMC é: " + IMC + ".";
+            }
+           
+        }    
+       
+
         }
     </script>
-
     <form>
-<input type="text" id="peso" name="peso" placeholder="Peso" required>
+<input type="text" id="peso" name="peso" placeholder="Peso" required onfocus="limpa()"> <p id="aviso"></p>
 <br>
 <br>
-<input type="text" id="altura" name="altura" placeholder="Altura" required>
+<input type="text" id="altura" name="altura" placeholder="Altura" required onfocus="limpa1()"> <p id="aviso1"></p>
 <br>
 <br>
+
 <input type="button" value="submit" onclick="verifyIMC()">
     </form>
-    <p id="resultado">Seu peso é: </p>
+    <p id="result">Seu peso é: </p>
 </body>
 </html>
