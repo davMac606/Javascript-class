@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9</title>
+</head>
+
+<body>
+    <style>
+        #changecolor {
+            color: green;
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            font-weight: bold;
+
+        }
+    </style>
+    <script>
+        function test() {
+            var x = document.getElementById('testing').value;
+            document.getElementById('anothertest').textContent = x;
+        }
+        function charcount() {
+            var maxLengthInput = 10;
+            var y = document.getElementById('counting').value;
+            document.getElementById('numChar').textContent = y.length;
+            document.getElementById('numCharLeft').textContent = maxLengthInput - y.length;
+            if (y.length < 3) {
+                document.getElementById('changecolor').style.color = "green";
+            } else if (y.length >= 3 && y.length <= 5) {
+                document.getElementById('changecolor').style.color = "orange";
+            }
+            else if (y.length > 5) {
+                document.getElementById('changecolor').style.color = "red";
+            } else {
+                document.getElementById('changecolor').style.color = "black";
+            }
+        }
+        function mostraColor() {
+            var cor = document.getElementById('corPreferida').value;
+            document.getElementById('colorwarning').style.color = cor;
+            document.getElementById('fundo').style.backgroundColor = cor;
+        }
+
+        function increasePrice() {
+            var preco = document.getElementById('Price').textContent;
+            document.getElementById('Price').innerHTML = preco + 1;
+        }
+        function decreasePrice() {
+            var preco = document.getElementById('Price').textContent;
+            document.getElementById('Price').innerHTML = preco - 1;
+        }
+    </script>
+    <input onchange="test()" type="range" id="testing">
+    <span id="anothertest">0</span><br><br>
+
+
+    <input type="text" onkeyup="charcount()" id="counting" maxlength="10">
+    <span id="numChar">0</span> caracteres/ <span id="changecolor"><span id="numCharLeft">10</span> caracteres
+        restantes.</span><br><br>
+
+
+    <input type="color" id="corPreferida" onchange="mostraColor()">
+    <br>
+    <br>
+    <span id="colorwarning">Cor preferida:</span>
+    <div id="fundo">
+
+    </div><br><br>
+
+
+    <input id="increase" onclick="increasePrice()" value="+" type="button"> <span id="Price"></span> 
+    <input id="decrease" onclick="decreasePrice()" value="-" type="button">
+</body>
+
+</html>
