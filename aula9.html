@@ -49,19 +49,69 @@
         }
 
         function increasePrice() {
-            
+
             document.getElementById('price').textContent = parseInt(document.getElementById('price').textContent) + 1;
-         
+            document.getElementById('decrease').disabled = false;
+
+
         }
         function decreasePrice() {
-           
-            var preco = parseInt(document.getElementById('price').textContent);
-            if (preco == 0) {
-                
+
+            if (parseInt(document.getElementById('price').textContent) <= 0) {
+                document.getElementById('decrease').disabled = true;
             } else {
                 document.getElementById('price').textContent = parseInt(document.getElementById('price').textContent) - 1;
             }
         }
+
+
+        function gerarCidade() {
+            var estado = document.getElementById('estado').value;
+            var cidade = document.getElementById('cidade');
+
+
+            var cidadesSP = ['Limeira', 'Campinas', 'Valinhos'];
+            var cidadesMG = ['Varginha', 'Belo Horizonte', 'Mantimento'];
+            var cidadesRJ = ['Rio de Janeiro', 'Niterói', 'Angra dos Reis'];
+
+            var option = "";
+
+
+            if (estado == "SP") {
+                limpaCombo();
+                alimentaCombo(cidadesSP);
+            }
+
+            if (estado == "MG") {
+                limpaCombo();
+                alimentaCombo(cidadesMG);
+            }
+        }
+
+        if (estado == "RJ") {
+            limpaCombo();
+            alimentaCombo(cidadesRJ);
+        }
+
+            
+
+        function alimentaCombo(cidades) {
+            for (var i = 0; i < cidades.length; i++) {
+                option = document.createElement("option");
+                option.value = i;
+                option.text = cidades[i];
+                cidade.add(option);
+            }
+        }
+        function limpaCombo() {
+            var comboCidades = document.getElementById('cidade');
+
+            while (comboCidades.length) {
+                comboCidades.remove(0);
+            }
+        }
+
+
     </script>
     <input onchange="test()" type="range" id="testing">
     <span id="anothertest">0</span><br><br>
@@ -81,8 +131,25 @@
     </div><br><br>
 
 
-    <input id="increase" onclick="increasePrice()" value="+" type="button"> <span id="price">0</span> 
+    <input id="increase" onclick="increasePrice()" value="+" type="button"> <span id="price"
+        onchange="verificacao()">0</span>
     <input id="decrease" onclick="decreasePrice()" value="-" type="button">
+    <br>
+    <br>
+
+    <form>
+        Estado:<br>
+        <select id="estado" onchange="gerarCidade()">
+            <option value="1"> </option>
+            <option value="2">SP</option>
+            <option value="3">MG</option>
+        </select><br><br>
+
+
+        <select id="cidades">
+
+        </select>
+    </form>
 </body>
 
 </html>
