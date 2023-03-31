@@ -49,12 +49,18 @@
         }
 
         function increasePrice() {
-            var preco = document.getElementById('Price').textContent;
-            document.getElementById('Price').innerHTML = preco + 1;
+            
+            document.getElementById('price').textContent = parseInt(document.getElementById('price').textContent) + 1;
+         
         }
         function decreasePrice() {
-            var preco = document.getElementById('Price').textContent;
-            document.getElementById('Price').innerHTML = preco - 1;
+           
+            var preco = parseInt(document.getElementById('price').textContent);
+            if (preco == 0) {
+                
+            } else {
+                document.getElementById('price').textContent = parseInt(document.getElementById('price').textContent) - 1;
+            }
         }
     </script>
     <input onchange="test()" type="range" id="testing">
@@ -75,7 +81,7 @@
     </div><br><br>
 
 
-    <input id="increase" onclick="increasePrice()" value="+" type="button"> <span id="Price"></span> 
+    <input id="increase" onclick="increasePrice()" value="+" type="button"> <span id="price">0</span> 
     <input id="decrease" onclick="decreasePrice()" value="-" type="button">
 </body>
 
