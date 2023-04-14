@@ -8,6 +8,11 @@
 </head>
 <body>
     <style>
+<<<<<<< HEAD
+        #resultado {
+            color: green;
+        }
+=======
         #aviso {
             color: red;
             font-weight: bold;
@@ -21,6 +26,7 @@
             font-style: italic;
         }
 
+>>>>>>> e3107a59f34418c75437bf91ee3257e894a4cc3f
     </style>
     <script type="text/javascript">
         function limpa() {
@@ -37,6 +43,11 @@
         var weight = document.getElementById('peso').value;
         var height = document.getElementById('altura').value;
 
+<<<<<<< HEAD
+        var IMC = weight / (Math.pow(height, 2));
+        
+        document.getElementById('resultado').innerHTML = "Seu peso é: " + IMC + ".";
+=======
         if (weight <= 0) {
             document.getElementById('aviso').innerHTML ="O valor não pode ser negativo!";
         } else {
@@ -47,6 +58,7 @@
                 document.getElementById('result').innerHTML = "Seu IMC é: " + IMC + ".";
             }
            
+>>>>>>> e3107a59f34418c75437bf91ee3257e894a4cc3f
         }
    
        document.write(x);

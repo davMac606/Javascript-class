@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Exercício de Teste</h1>
+    <script>
+        var valorRaio = " ";
+        var valorArea = " ";
+        var areaSelected = false;
+        var periSelected = false;
+        
+        function selecionaArea() {
+            document.getElementById('opcaoPeri').style.display = "none";
+            document.getElementById('resultado').textContent = "Resultado do cálculo de área: ";
+            areaSelected = true;
+            
+        }
+        function selecionaPeri() {
+            document.getElementById('opcaoArea').style.display = "none";
+            document.getElementById('resultado').textContent = "Resultado do cálculo de perímetro: ";
+            periSelected = true;
+        }
+        function calcular() {
+            if (areaSelected == true) {
+                var valorRaio = document.getElementById('campoRaio').value;
+                var valorArea = document.getElementById('campoArea').value;
+    
+                    var area = (Math.PI) * Math.pow(valorRaio, 2);
+                    var areaDef = parseFloat(area).toFixed(2);
+                document.getElementById('resultado').textContent = "Resultado do cálculo de área: " + areaDef + ".";
+            } else if (periSelected == true) {
+                var valorRaio = document.getElementById('campoRaio').value;
+                var valorArea = document.getElementById('campoArea').value;
+    
+                    var peri = 2 * (Math.PI) * valorRaio;
+                    var periDef = parseFloat(peri).toFixed(2);
+                document.getElementById('resultado').textContent = "Resultado do cálculo de perímetro: " + periDef + ".";
+            }
+
+
+               
+            
+        }
+    </script>
+    <p id="resultado"></p>
+    <form>
+        <input type="button" id="opcaoArea" value="Área" onclick="selecionaArea()" required>
+
+        <input type="button" id="opcaoPeri" value="Perímetro" onclick="selecionaPeri()" required ><br><br>
+
+        <input type="text" id="campoRaio" placeholder="Insira o valor do raio" required><br><br>
+
+        <input type="text" id="campoArea" placeholder="Insira o valor da área" required><br><br>
+
+        <input type="button" onclick="calcular()" value="Calcular">
+    </form>
+
+</body>
+</html>
